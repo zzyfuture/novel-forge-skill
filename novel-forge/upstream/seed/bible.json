@@ -1,0 +1,211 @@
+{
+  "version": "1.0",
+  "rules": [
+    {"category": "核心", "statement": "大客户订单本质是客户内部权力斗争的附属品，产品只是入场道具。", "hard": 1},
+    {"category": "核心", "statement": "外企永远双线战场：对外抢项目，对内抢位置。外战输了可以翻盘，内战输了直接出局。", "hard": 1},
+    {"category": "核心", "statement": "同行无绝对仇敌，只有绝对利益；今日对手，明日上司，后天盟友。", "hard": 1},
+    {"category": "核心", "statement": "顶级销售的能力不是口才，是预判人性、预埋后手、及时止损、顺势取舍。", "hard": 1},
+    {"category": "基调", "statement": "本书是单一 POV 小说，全程从沈砺视角叙事。", "hard": 1},
+    {"category": "基调", "statement": "本书不自我点破，不出现'圈子''局'这些词。所有冲突通过动作和对话体现，不用内心独白解释。", "hard": 1}
+  ],
+  "characters": [
+    {
+      "name": "沈砺",
+      "aliases": ["小沈", "沈总"],
+      "role": "主角",
+      "voice": "克制、专业、谋定后动；对话短，判断通过动作体现",
+      "traits": ["理性守界", "知世故不世故", "共情力弱", "凡事留后手"],
+      "appearance_prompt": "32-year-old Chinese man, lean build, square jaw, sharp calm eyes, black short hair neatly parted on the left, wearing a dark navy business suit with a white shirt and no tie, metal-banded quartz wristwatch on left wrist, no glasses",
+      "appearance_notes": "中等身材偏瘦；方脸，下颌线明显；眼神冷静克制；黑色短发三七分；藏蓝色西装+白衬衫，不打领带",
+      "abilities": [],
+      "status": "alive"
+    },
+    {
+      "name": "江屹",
+      "aliases": ["师兄"],
+      "role": "核心反派/宿敌",
+      "voice": "平静、职业、偶尔疲惫；从不贬低对手",
+      "traits": ["天赋极高", "野心滔天", "信奉弱肉强食", "敢赌敢骗"],
+      "appearance_prompt": "33-year-old Chinese man, athletic build, narrow eyes with sharp gaze, short black hair slicked back, wearing a charcoal grey suit with a light blue shirt and no tie, gold-banded watch, confident posture",
+      "appearance_notes": "比沈砺略高，体格精壮；眼睛细长，目光锐利；黑色短发向后梳；炭灰色西装",
+      "abilities": [],
+      "status": "alive"
+    },
+    {
+      "name": "陆舟",
+      "aliases": [],
+      "role": "核心下属",
+      "voice": "直接、务实、不多话",
+      "traits": ["踏实肯干", "执行力强", "技术出身", "绝对忠心"],
+      "appearance_prompt": "30-year-old Chinese man, medium build, round face, short black hair, wearing a light blue short-sleeve shirt tucked into grey slacks, carrying a laptop bag on shoulder, practical unremarkable appearance",
+      "appearance_notes": "中等身材，圆脸；短黑发；浅蓝色短袖衬衫塞进灰色休闲裤；总背着笔记本电脑包",
+      "abilities": [],
+      "status": "alive"
+    },
+    {
+      "name": "苏晚",
+      "aliases": [],
+      "role": "女主/情感线",
+      "voice": "通透、独立、职业性极强；不撒娇，不示弱",
+      "traits": ["清醒独立", "三观正", "懂规则但不屑投机"],
+      "appearance_prompt": "30-year-old Chinese woman, slim, shoulder-length black hair tucked behind ears, calm intelligent eyes, minimal makeup, wearing a beige tailored blazer and dark trousers, holding a slim leather folder, professional and understated",
+      "appearance_notes": "清瘦；黑色齐肩发；妆容极淡；米色修身西装 + 深色长裤；常带一个窄皮文件夹",
+      "abilities": [],
+      "status": "alive"
+    },
+    {
+      "name": "温曼",
+      "aliases": [],
+      "role": "现实型配角",
+      "voice": "坦然、务实、偶尔带一丝'我是为你好'的真诚",
+      "traits": ["极度现实", "趋利避害", "只依附胜者"],
+      "appearance_prompt": "34-year-old Chinese woman, medium height, wavy black hair to shoulders, carefully applied but understated makeup, wearing a white silk blouse and a grey pencil skirt, holding a blue Starbucks tumbler with worn logo",
+      "appearance_notes": "中等身高；黑色微卷齐肩发；妆容精致但不过分；白色真丝衬衫 + 灰色包臀裙；常带一个磨掉 logo 的星巴克随行杯",
+      "abilities": [],
+      "status": "alive"
+    },
+    {
+      "name": "凯恩",
+      "aliases": [],
+      "role": "外籍高管",
+      "voice": "职业、冷静、只谈数据；冷酷来自制度不是恶意",
+      "traits": ["只看数据", "不懂中国区", "易被汇报话术蒙蔽"],
+      "appearance_prompt": "50-year-old Caucasian man, tall and broad-shouldered, greying short hair, clean-shaven, wearing a well-cut dark grey suit with a white shirt and a navy tie, silver cufflinks, executive presence",
+      "appearance_notes": "50 岁白人男性；身材高大；灰白短发；深灰色正装；藏蓝领带",
+      "abilities": [],
+      "status": "alive"
+    },
+    {
+      "name": "程知远",
+      "aliases": ["程总"],
+      "role": "联科总经理",
+      "voice": "不表态、只问问题；把所有人都当棋子且不觉得有什么不对",
+      "traits": ["布局型", "看结果不看过程", "背后有资本方"],
+      "appearance_prompt": "45-year-old Chinese man, medium height with slight paunch, thinning black hair combed back, wearing a dark brown suit with a white shirt and no tie, gold-rimmed glasses, calm inscrutable expression",
+      "appearance_notes": "45 岁；中等身高略胖；黑色稀疏背头；深棕色正装；金边眼镜；表情难以捉摸",
+      "abilities": [],
+      "status": "alive"
+    },
+    {
+      "name": "张维",
+      "aliases": ["老张"],
+      "role": "联科南区二组组长",
+      "voice": "公事公办、滴水不漏",
+      "traits": ["老联科代表", "兼管华南", "程知远的平衡木"],
+      "appearance_prompt": "40-year-old Chinese man, medium build, square face, short black hair, wearing a navy blue short-sleeve shirt and black slacks, carrying a black leather portfolio, cautious guarded expression",
+      "appearance_notes": "40 岁；中等身材；方脸；深蓝色短袖衬衫 + 黑色长裤；常带黑色皮公文包",
+      "abilities": [],
+      "status": "alive"
+    },
+    {
+      "name": "周旋",
+      "aliases": ["周总"],
+      "role": "华晟技术负责人",
+      "voice": "热情过头、说话太具体",
+      "traits": ["技术出身", "被江屹收编", "表面中立"],
+      "appearance_prompt": "45-year-old Chinese man, slightly stout, receding hairline, wearing a short-sleeve polo shirt tucked into khaki trousers, a lanyard with a badge around his neck, warm but calculating smile, typical Chinese SOE technical staff",
+      "appearance_notes": "45 岁；微胖；发际线后移；带领子短袖 polo 塞进卡其裤；脖子上挂工作牌；笑容热情但精明",
+      "abilities": [],
+      "status": "alive"
+    },
+    {
+      "name": "林建国",
+      "aliases": ["林主任"],
+      "role": "通恒集团 IT 负责人",
+      "voice": "官方、克制、不多话",
+      "traits": ["在锐科做过三个月顾问", "履历有空白"],
+      "appearance_prompt": "48-year-old Chinese man, medium height and build, greying short hair, wearing a white short-sleeve button-up shirt and dark grey trousers, calm official demeanor, rarely smiles",
+      "appearance_notes": "48 岁；中等身材；灰白短发；白色短袖衬衫；深灰色西裤；官方克制，极少笑",
+      "abilities": [],
+      "status": "alive"
+    }
+  ],
+  "locations": [
+    {
+      "name": "星途南区办公室",
+      "region": "上海",
+      "aliases": [],
+      "traits": [],
+      "visual_prompt": "modern open-plan office of an American software company in Shanghai, 2010, glass partitions, ThinkPad laptops on desks, city skyline visible through floor-to-ceiling windows, fluorescent lighting, cool professional atmosphere",
+      "lighting_notes": "白天自然光 + 日光灯混合；夜间只有台灯和部分灯光"
+    },
+    {
+      "name": "华晟集团信息化中心",
+      "region": "上海",
+      "aliases": [],
+      "traits": [],
+      "visual_prompt": "Chinese state-owned enterprise IT department office, 2010, beige walls, long conference tables, projectors, printed documents stacked on desks, formal and slightly dated aesthetic",
+      "lighting_notes": "冷白日光灯为主"
+    },
+    {
+      "name": "私房菜馆",
+      "region": "上海",
+      "aliases": [],
+      "traits": ["反复出现的饭局地点"],
+      "visual_prompt": "private dining room of a high-end Shanghainese restaurant, 2010, round table with white tablecloth, dark wooden furniture, soft warm lighting, tea sets and porcelain, intimate and slightly secretive atmosphere",
+      "lighting_notes": "暖黄色吊灯，光线柔和"
+    },
+    {
+      "name": "联科科技南区办公室",
+      "region": "上海",
+      "aliases": [],
+      "traits": [],
+      "visual_prompt": "mid-tier Chinese IT integration company office, 2011, mix of old and new furniture, grey office chairs, whiteboards with technical diagrams, printouts pinned to walls, modest budget feel",
+      "lighting_notes": "偏冷的日光灯"
+    },
+    {
+      "name": "通恒集团",
+      "region": "华东",
+      "aliases": [],
+      "traits": ["地方国企"],
+      "visual_prompt": "Chinese provincial state-owned enterprise headquarters, 2011, beige stone facade, high-ceiling lobby with marble floors, large institutional feel, national flag at entrance",
+      "lighting_notes": "大堂自然采光 + 室内照明"
+    },
+    {
+      "name": "国投能源总部",
+      "region": "北京",
+      "aliases": [],
+      "traits": ["央企"],
+      "visual_prompt": "Chinese central state-owned enterprise headquarters in Beijing, 2013, grand marble lobby, tall ceilings, red carpets in meeting halls, formal conference room with long U-shaped table, imposing scale",
+      "lighting_notes": "庄重的暖白照明"
+    },
+    {
+      "name": "联科总部",
+      "region": "上海",
+      "aliases": [],
+      "traits": [],
+      "visual_prompt": "headquarters office of a mid-tier Chinese IT company in Shanghai, 2011, mid-rise building, executive floor with wood-paneled meeting room, leather chairs, formal but modest",
+      "lighting_notes": "暖白照明"
+    }
+  ],
+  "props": [
+    {
+      "name": "青铜罗盘",
+      "aliases": [],
+      "visual_prompt": "an antique bronze compass with worn patina, engraved celestial markings on the lid, roughly palm-sized, mysterious and valuable-looking, placed on a dark wooden desk",
+      "first_chapter": 5,
+      "notes": "第 5 章埋，第 9 章回收的核心道具"
+    },
+    {
+      "name": "诺基亚 E71",
+      "aliases": [],
+      "visual_prompt": "Nokia E71 smartphone, silver-grey metallic body, QWERTY keypad, small screen, 2010 era device, held in hand or placed on desk",
+      "first_chapter": 1,
+      "notes": "沈砺 2010 年的手机"
+    },
+    {
+      "name": "暗版报价信封",
+      "aliases": [],
+      "visual_prompt": "a sealed kraft-paper envelope, unmarked, slightly worn at the corners, kept inside a small safe, the contents unknown",
+      "first_chapter": 4,
+      "notes": "沈砺留的后手"
+    },
+    {
+      "name": "牛皮纸信封-名单",
+      "aliases": [],
+      "visual_prompt": "a thick kraft-paper envelope containing several sheets of paper, slightly aged, placed on a desk or locked in a drawer, faint pencil marks visible",
+      "first_chapter": 28,
+      "notes": "苏晚交给沈砺的名单"
+    }
+  ]
+}

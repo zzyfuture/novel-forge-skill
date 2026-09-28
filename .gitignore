@@ -1,0 +1,16 @@
+﻿__pycache__/
+*.pyc
+*.pyo
+*.db
+*.db-wal
+*.db-shm
+.DS_Store
+node_modules/
+pack_skill.py
+test_*.py
+diag_*.py
+check_*.py
+verify_*.py
+fix*.py
+clean*.py
+llmtest.py

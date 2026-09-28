@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>织章 · 多 Agent 一致性写作引擎</title>
+  <link rel="stylesheet" href="./app.css" />
+
+  <script data-hellome-presence>
+  (function hellomePresence() {
+    'use strict';
+    var KEY = 'novel-forge-client-id';
+    var PING_MS = 20000;
+
+    function makeClientId() {
+      try {
+        if (window.crypto && typeof crypto.randomUUID === 'function') {
+          return crypto.randomUUID();
+        }
+      } catch (e) {}
+      return 'c' + Date.now().toString(36) + Math.random().toString(36).slice(2, 10);
+    }
+
+    var clientId = null;
+    try { clientId = sessionStorage.getItem(KEY); } catch (e) {}
+    if (!clientId) {
+      clientId = makeClientId();
+      try { sessionStorage.setItem(KEY, clientId); } catch (e) {}
+    }
+
+    function sendPresence(action) {
+      var body = JSON.stringify({ action: action, clientId: clientId });
+      try {
+        if (action === 'bye' && typeof navigator.sendBeacon === 'function') {
+          var blob = new Blob([body], { type: 'application/json' });
+          if (navigator.sendBeacon('/api/presence', blob)) return;
+        }
+      } catch (e) {}
+      try {
+        fetch('/api/presence', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: body,
+          keepalive: action === 'bye',
+        }).catch(function () {});
+      } catch (e) {}
+    }
+
+    var pingTimer = null;
+    function armPing() {
+      if (pingTimer !== null) return;
+      pingTimer = setInterval(function () { sendPresence('ping'); }, PING_MS);
+    }
+    function disarmPing() {
+      if (pingTimer === null) return;
+      try { clearInterval(pingTimer); } catch (e) {}
+      pingTimer = null;
+    }
+
+    sendPresence('hello');
+    armPing();
+
+    window.addEventListener('pagehide', function () {
+      disarmPing();
+      sendPresence('bye');
+    });
+    window.addEventListener('pageshow', function (event) {
+      if (!event || !event.persisted) return;
+      sendPresence('hello');
+      armPing();
+    });
+  })();
+  </script>
+</head>
+<body>
+  <div id="app">
+    <header class="topbar">
+      <div class="brand">
+        <span class="brand-mark">◆</span>
+        <span class="brand-name">织章</span>
+        <span class="brand-sub" id="project-title">未命名作品</span>
+      </div>
+      <div class="topbar-right">
+        <span class="status-dot" id="llm-status" title="LLM 状态">●</span>
+        <button class="btn-ghost" id="btn-settings">设置</button>
+      </div>
+    </header>
+
+    <aside class="sidenav">
+      <nav>
+        <a class="nav-item" data-view="overview">总览</a>
+        <a class="nav-item" data-view="bible">设定圣经</a>
+        <a class="nav-item" data-view="outline">大纲</a>
+        <a class="nav-item" data-view="studio">章节工作台</a>
+        <a class="nav-item" data-view="continuity">一致性中心</a>
+        <a class="nav-item" data-view="settings">设置</a>
+      </nav>
+      <div class="progress-card">
+        <div class="progress-label">进度</div>
+        <div class="progress-value" id="progress-text">0 / 36</div>
+        <div class="progress-bar"><div class="progress-fill" id="progress-fill"></div></div>
+      </div>
+    </aside>
+
+    <main class="main" id="main-view"></main>
+
+    <footer class="statusbar">
+      <span id="status-text">就绪</span>
+      <span class="statusbar-right" id="meta-info"></span>
+    </footer>
+  </div>
+
+  <script type="module" src="./js/app.js"></script>
+</body>
+</html>
