@@ -36,7 +36,7 @@
 
 ### 四层一致性闸门
 
-![分镜示例](./screenshots/03-storyboard.png)
+![一致性中心](./screenshots/04-consistency.png)
 
 | 层 | 类型 | 检查内容 |
 |----|------|---------|
